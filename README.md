@@ -18,7 +18,7 @@ lambda でローカル開発環境のテンプレート
 ├── README.md
 ├── lambda_function.py ・・・実行ファイル
 ├── layers
-│   └── python3-selenum-headless ・・・headress 用のドライバ
+│   └── python3-selenium-headless ・・・headress 用のドライバ
 │             └── headless
 │               └── python
 │                    └── bin
@@ -40,7 +40,7 @@ $ docker run -v "$PWD":/var/task -e WANT_ENVIRONMENT="" lambci/lambda:python3.7 
 
 ```shell script
 $ docker build -t your-image-name .
-$ docker run -v "$PWD":/var/task your-image-file:latest
+$ docker run -v "$PWD":/var/task your-image-name:latest
 # デプロイ用のファイルが作成できたことを確認
 $ ls -al deploy_package.zip
 

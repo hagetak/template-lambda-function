@@ -3,7 +3,7 @@ from selenium import webdriver
 class Chrome:
     def headless_lambda(self):
         options = webdriver.ChromeOptions()
-        options.binary_location = "./layers/python3-selenum-headless/headless/python/bin/headless-chromium"
+        options.binary_location = "./layers/python3-selenium-headless/headless/python/bin/headless-chromium"
         options.add_argument("--headless")
         options.add_argument("--no-sandbox")
         options.add_argument("--single-process")
@@ -18,7 +18,7 @@ class Chrome:
         options.add_argument("--homedir=/tmp")
 
         driver = webdriver.Chrome(
-            executable_path="./layers/python3-selenum-headless/headless/python/bin/chromedriver",
+            executable_path="./layers/python3-selenium-headless/headless/python/bin/chromedriver",
             chrome_options=options
         )
         return driver

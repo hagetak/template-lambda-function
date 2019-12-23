@@ -6,8 +6,8 @@ ADD . .
 
 RUN rm -rf *.zip \
     && curl -SL https://github.com/adieuadieu/serverless-chrome/releases/download/v1.0.0-55/stable-headless-chromium-amazonlinux-2017-03.zip > ./stable-headless-chromium-amazonlinux-2017-03.zip \
-    && rm ./layers/python3-selenum-headless/headless/python/bin/headless-chromium \
-    && unzip ./stable-headless-chromium-amazonlinux-2017-03.zip -d ./layers/python3-selenum-headless/headless/python/bin/
+    && rm ./layers/python3-selenium-headless/headless/python/bin/headless-chromium \
+    && unzip ./stable-headless-chromium-amazonlinux-2017-03.zip -d ./layers/python3-selenium-headless/headless/python/bin/
 
 RUN /bin/cp -f /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
   pip install -r requirements.txt -t /var/task
